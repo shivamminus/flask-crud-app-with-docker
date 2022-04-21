@@ -1,0 +1,25 @@
+version: "3"
+services:
+  app:
+    image: 96385274/flask-crud:1.0.3
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    links:
+      - mongodb:localhost
+  mongodb:
+    image: mongo:latest
+    container_name: mongo
+    environment:
+      MONGO_INITDB_DATABASE: mydb
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pass
+    volumes: 
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./mongo_external_volume:/data/db
+    ports:
+      - 27017:27017
+networks:
+  default:
+    name: compose-net 

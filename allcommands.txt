@@ -1,0 +1,50 @@
+docker build -t 96385274/flask-crud:1.0.0
+docker build -t 96385274/flask-crud:1.0.0 .
+docker login
+docker build -t 96385274/flask-crud:1.0.0 .
+pip freeze > requirements.txt
+docker build -t 96385274/flask-crud:1.0.0 .
+docker push -t 96385274/flask-crud:1.0.0 .
+docker push -t 96385274/flask-crud:1.0.0
+docker push 96385274/flask-crud:1.0.0
+docker run
+docker images
+docker run 96385274/flask-crud:1.0.0
+docker build -t 96385274/flask-crud:1.0.0 .
+docker push 96385274/flask-crud:1.0.0
+cd ..
+kubectl create -f app-deployment.yaml
+kubectl get nodes
+docker network create flaskapp-net
+docker run --name=mongo --rm -d --network=tasksapp-net mongo
+docker run --name=mongo --rm -d --network=flaskapp-net mongo
+docker run –-name=flaskapp-python --rm -p 5000:5000 -d --network=flaskapp-net 96385274/flaskapp-crud:1.0.0
+docker run –-name=flaskapp-python --rm -p 5000:5000 -d --network=flaskapp-net 96385274/flask-crud:1.0.0
+docker run  --rm -p 5000:5000 -d --network=flaskapp-net 96385274/flask-crud:1.0.0
+kubectl create -f app-deployment.yaml
+kubectl scale deployment flaskapp --replicas=3
+kubectl create -f app-svc.yaml
+kubectl get svc flaskapp-svc
+curl 10.103.82.106:8080
+curl 10.100.198.90
+curl 10.100.198.90:8080
+kubectl get nodes
+kubectl get pods
+kubectl delete deployment flaskapp
+kubectl create -f app-deployment.yaml
+kubectl scale deployment flaskapp --replicas=3
+kubectl get pods
+kubectl get svc flaskapp-svc
+curl 10.100.198.90:8080
+curl 10.100.198.90:30037
+kubectl delete svc flaskapp-svc
+kubectl create -f app-svc.yaml
+kubectl get svc flaskapp-svc
+curl 10.98.219.142
+curl 10.98.219.142:8080
+kubectl get all
+curl 10.98.219.142:8080
+curl
+curl 10.98.219.142:30293
+doskey /history
+doskey /history > allcommands.txt
